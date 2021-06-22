@@ -29,6 +29,7 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivUser"
+                    imageUrl="@{data.avatar}"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:padding="5dp"
@@ -46,6 +47,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
+                        android:text="@{data.firstName + ` ` + data.lastName}"
                         android:textSize="20sp"
                         tools:text="Jimesh Solanki" />
 
@@ -54,8 +56,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:textSize="16sp"
                         android:text="@{data.email}"
+                        android:textSize="16sp"
                         tools:text="jimeshsolanki@gmail.com" />
 
                 </LinearLayout>
