@@ -73,6 +73,8 @@ class MainActivity : AppCompatActivity(),
     }
 
     override fun onRefresh() {
+        userArrayList.clear()
+        adapter.notifyDataSetChanged()
         binding.swipeRefreshLayout.isRefreshing = true
         currentOffSet = PAGE_START
         loadUserData()
