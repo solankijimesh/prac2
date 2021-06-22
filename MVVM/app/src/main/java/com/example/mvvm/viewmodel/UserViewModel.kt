@@ -23,8 +23,9 @@ class UserViewModel() : ViewModel() {
 
         call.enqueue(object : Callback<UserResponse> {
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
-                if (response.body()?.data != null)
-                    userList.postValue(response.body()?.data)
+
+                if(response.body()?.data != null)
+                userList.postValue(response.body()?.data)
             }
 
             override fun onFailure(call: Call<UserResponse>, t: Throwable) {
